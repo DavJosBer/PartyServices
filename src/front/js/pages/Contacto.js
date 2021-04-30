@@ -5,7 +5,7 @@ import { Context } from "../store/appContext";
 export const Contacto = () => {
 	const { store, actions } = useContext(Context);
 	return (
-		<div className="container text-center mt-5">
+		<div className="container text-center mt-5" style={{ height: "1000px" }}>
 			<section className="signup-section" id="signup">
 				<div className="container">
 					<div className="row">
@@ -17,9 +17,9 @@ export const Contacto = () => {
 									className="form-control flex-fill mr-0 mr-sm-2 mb-3 mb-sm-0"
 									id="inputEmail"
 									type="email"
-									placeholder="Enter email address..."
+									placeholder="Ingrese la dirección de email..."
 								/>
-								<button className="btn btn-primary mx-auto" type="submit">
+								<button className="btn btn-dark mx-auto" type="submit">
 									Enviar
 								</button>
 							</form>
@@ -39,10 +39,10 @@ export const Contacto = () => {
 									height="100"
 								/>
 							</div>
-							<h4 className="text-uppercase m-0 text-dark">Llamanos</h4>
+							<h4 className="text-uppercase m-0 text-dark">Llámanos</h4>
 							<hr className="my-4" />
 							<div className="small text-black-50">
-								Llámenos sin costo desde su celular al operador 800-000-09378
+								Llámenos al número de teléfono 8574-6474 o al 6478-4547
 							</div>
 						</div>
 						<div className="col-md-4 mb-3 mb-md-0">
@@ -56,7 +56,7 @@ export const Contacto = () => {
 							<h4 className="text-uppercase m-0 text-dark">Email</h4>
 							<hr className="my-4" />
 							<div className="small text-black-50">
-								<a href="#!">CateringServices.com</a>
+								<a href="#!">partysservices.com</a>
 							</div>
 						</div>
 						<div className="col-md-4 mb-3 mb-md-0">
@@ -66,7 +66,7 @@ export const Contacto = () => {
 							<h4 className="text-uppercase m-0 text-dark">WhatsApp</h4>
 							<hr className="my-4" />
 							<div className="small text-black-50">
-								Contáctenos vía WhatsApp al +506 9081-1199, atención las 24 horas.
+								Contáctenos vía WhatsApp al +506 8574-6474, atención las 24 horas.
 							</div>
 						</div>
 					</div>

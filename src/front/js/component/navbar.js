@@ -65,13 +65,13 @@ export const Navbar_main = () => {
 					</Button>
 				)}
 			</Nav>
-			<div className="bg-primary d-flex align-items-center justify-content-center px-1 rounded">
+			<div className="bg-dark d-flex align-items-center justify-content-center px-1 rounded">
 				<Link to="/articles">
 					<i className="fas fa-shopping-cart pl-1 text-light" />
 				</Link>
 				<div className="dropdown">
 					<button
-						className="btn btn-primary py-2 dropdown-toggle d-flex justify-content-between align-items-center"
+						className="btn btn-dark py-2 dropdown-toggle d-flex justify-content-between align-items-center"
 						type="button"
 						id="dropdownMenuButton"
 						data-toggle="dropdown"

@@ -5,20 +5,7 @@ import { Context } from "../store/appContext";
 export const Pago = () => {
 	const { store, actions } = useContext(Context);
 	return (
-		<div className="container mt-5">
-			<div className=" col-md-12 mb-3 mb-md-0">
-				{/* <div className="container text-center mt-5">
-					<img
-						src="https://www.flaticon.es/svg/vstatic/svg/747/747156.svg?token=exp=1619679608~hmac=27ae2efe06420b5ef491c011055d7ac5"
-						width="100"
-						height="100"
-					/>
-					<h1 className="display-4">Metodo de Pago</h1>
-				</div> */}
-				<div>
-					<hr className="my-4" />
-				</div>
-			</div>
+		<div className="container">
 			<div>
 				<div className="card-header bg-none text-center">
 					<h2>Concluyamos la compra</h2>
@@ -31,7 +18,7 @@ export const Pago = () => {
 						<div className="row mt-3">
 							<div className="col-md-4">
 								<div className="form">
-									<label className="form-label text-dark">Card #</label>
+									<label className="form-label text-dark">Número de tarjeta</label>
 									<input
 										type="number"
 										id="card"
@@ -43,7 +30,7 @@ export const Pago = () => {
 							</div>
 							<div className="col-md-4">
 								<div className="form">
-									<label className="form-label text-dark">CVC #</label>
+									<label className="form-label text-dark">Código de seguridad</label>
 									<input type="number" id="cvc" className="form-control" placeholder="0000" />
 									<p id="alertCvc" />
 								</div>
@@ -51,7 +38,7 @@ export const Pago = () => {
 							<div className="col-md-4">
 								<div className="form">
 									<label htmlFor="amount" className="form-label">
-										Amount
+										Total a pagar
 									</label>
 									<div className="input-group">
 										<div>
@@ -61,7 +48,7 @@ export const Pago = () => {
 											type="number"
 											className="form-control disabled"
 											id="amount"
-											placeholder="Amount"
+											placeholder="10000"
 											readOnly
 											value={store.total}
 										/>
@@ -73,14 +60,14 @@ export const Pago = () => {
 						<div className="row mt-3">
 							<div className="col-md-6">
 								<div className="form">
-									<label className="form-label text-dark">First Name</label>
+									<label className="form-label text-dark">Primer Nombre</label>
 									<input type="text" id="firstName" className="form-control" />
 									<p id="alertName" />
 								</div>
 							</div>
 							<div className="col-md-6">
 								<div className="form">
-									<label className="form-label text-dark">Last Name</label>
+									<label className="form-label text-dark">Apellidos</label>
 									<input type="text" id="lastName" className="form-control" />
 									<p id="alertLastName" />
 								</div>
@@ -89,23 +76,23 @@ export const Pago = () => {
 						<div className="row mt-3">
 							<div className="col-md-6">
 								<div className="form">
-									<label className="form-label text-dark">City</label>
+									<label className="form-label text-dark">Ciudad</label>
 									<input type="text" id="city" className="form-control" />
 									<p id="alertCity" />
 								</div>
 							</div>
 							<div className="col-md-3">
 								<div className="form">
-									<label className="form-label text-dark">State</label>
-									<input type="text" id="state" className="form-control" placeholder="Pick a state" />
+									<label className="form-label text-dark">Cantón</label>
+									<input type="text" id="state" className="form-control" placeholder="" />
 									<p id="alertState" />
 								</div>
 							</div>
 
 							<div className="col-md-3">
 								<div className="form">
-									<label className="form-label text-dark">Postal Code</label>
-									<input type="number" id="postalCode" className="form-control" />
+									<label className="form-label text-dark">Código postal</label>
+									<input type="text" id="postalCode" className="form-control" />
 									<p id="alertPostal" />
 								</div>
 							</div>
@@ -114,7 +101,7 @@ export const Pago = () => {
 						<div className="row mt-2">
 							<div className="col-md-6">
 								<label htmlFor="paymentCard" className="form-label">
-									We accept:
+									Aceptamos:
 								</label>
 								<div className="col-lg-8 rounded-1 p-2 d-flex justify-content-between bg-secondary text-light">
 									<div className="form-check-inline">
@@ -163,13 +150,13 @@ export const Pago = () => {
 						</div>
 					</div>
 					<div className="card-footer mt-5">
-						<div className="row p-1">
-							<div className="col-md-12">
-								<button className="btn btn-primary float-end m-1" type="submit">
-									Send
+						<div className="">
+							<div className="text-right">
+								<button className="btn btn-secondary float-end m-2" type="button" onClick="resetForm()">
+									Cancelar
 								</button>
-								<button className="btn btn-secondary float-end m-1" type="button" onClick="resetForm()">
-									Cancel
+								<button className="btn btn-primary float-end m-2" type="submit">
+									Finalizar
 								</button>
 							</div>
 						</div>

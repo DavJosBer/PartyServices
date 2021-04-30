@@ -6,31 +6,24 @@ import "../../styles/acerca.scss";
 export const Acerca = () => {
 	const { store, actions } = useContext(Context);
 	return (
-		<div className="container text-center mt-5">
-			<div className=" col-md-12 mb-3 mb-md-0">
-				<div className="container text-center mt-5">
-					<img
-						src="https://es.seaicons.com/wp-content/uploads/2015/06/drink-3-icon.png"
-						width="100"
-						height="100"
-					/>
-					<h1 className="display-4">Acerca de nosotros</h1>
-				</div>
-				<div>
-					<hr className="my-4" />
-				</div>
+		<div className="container text-center " style={{ height: "1700px" }}>
+			<div className="container text-center mt-5">
+				<h1 className="display-4">Acerca de nosotros</h1>
 			</div>
+			<div>
+				<hr className="my-4" />
+			</div>
+
 			<section className="page-section " id="team">
 				<div className="container">
 					<div className="text-center">
-						<h2 className="section-heading text-uppercase">Equipo</h2>
 						<p className="section-subheading text-muted">
-							<em>Colaboradores y miembros del proyecto final 4geeks academy Catering services web</em>
+							<em>Colaboradores y miembros del proyecto final 4Geeks Academy Party´s Services</em>
 						</p>
 						<div className="col-md-12 mb-3 mb-md-0" />
 					</div>
 					<div className="row">
-						<div className="col-lg-4">
+						<div className="col-lg-3">
 							<div className="team-member">
 								<img
 									className="mx-auto rounded-circle"
@@ -49,7 +42,7 @@ export const Acerca = () => {
 								</a>
 							</div>
 						</div>
-						<div className="col-lg-4">
+						<div className="col-lg-3">
 							<div className="team-member">
 								<img
 									className="mx-auto rounded-circle"
@@ -59,7 +52,7 @@ export const Acerca = () => {
 									height="150"
 								/>
 								<h4>Jobanny Zúñiga</h4>
-								<p className="text-muted">Lead Designer</p>
+								<p className="text-muted">Administrador de Empresas</p>
 								<a className="btn btn-dark btn-social mx-2" href="#!">
 									<i className="fab fa-twitter" />
 								</a>
@@ -68,7 +61,7 @@ export const Acerca = () => {
 								</a>
 							</div>
 						</div>
-						<div className="col-lg-4">
+						<div className="col-lg-3">
 							<div className="team-member">
 								<img
 									className="mx-auto rounded-circle"
@@ -77,8 +70,8 @@ export const Acerca = () => {
 									width="100"
 									height="100"
 								/>
-								<h4>Sharmey</h4>
-								<p className="text-muted">Lead Designer</p>
+								<h4>Sharmey Fallas</h4>
+								<p className="text-muted">Ingeniera Informática</p>
 								<a className="btn btn-dark btn-social mx-2" href="#!">
 									<i className="fab fa-twitter" />
 								</a>
@@ -87,7 +80,7 @@ export const Acerca = () => {
 								</a>
 							</div>
 						</div>
-						<div className="col-lg-12">
+						<div className="col-lg-3">
 							<div className="team-member">
 								<img
 									className="mx-auto rounded-circle"
@@ -96,6 +89,7 @@ export const Acerca = () => {
 									width="150"
 									height="150"
 								/>
+								<h4>Emanuel Burgalin</h4>
 								<p className="text-muted">Lead Designer</p>
 								<a className="btn btn-dark btn-social mx-2" href="#!">
 									<i className="fab fa-twitter" />
@@ -103,15 +97,7 @@ export const Acerca = () => {
 								<a className="btn btn-dark btn-social mx-2" href="#!">
 									<i className="fab fa-facebook-f" />
 								</a>
-								<h4>Emanuel Burgalin</h4>
 							</div>
-						</div>
-					</div>
-					<div className="row">
-						<div className="col-lg-8 mx-auto text-center">
-							<p className="large text-muted">
-								Colaboradores, gracias por su tiempo en la creacion de CaterigServices{" "}
-							</p>
 						</div>
 					</div>
 				</div>

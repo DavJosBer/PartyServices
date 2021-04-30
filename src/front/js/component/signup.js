@@ -35,13 +35,15 @@ export function SignUp() {
 
 	return (
 		<>
-			<Button className="m-3" variant="danger" onClick={handleShow}>
+			<Button className="btn btn-dark m-3" onClick={handleShow}>
 				Regístrese
 			</Button>
 
 			<Modal show={show} onHide={handleClose} backdrop="static" keyboard={false}>
 				<Modal.Header closeButton>
-					<Modal.Title>Ingrese la información solicitada para registarse como usuario</Modal.Title>
+					<Modal.Title className="text-center">
+						Ingrese la información solicitada para registrarse como usuario
+					</Modal.Title>
 				</Modal.Header>
 				<Modal.Body>
 					<Form noValidate validated={validated} onSubmit={event => handleSubmit(event)}>
@@ -97,18 +99,20 @@ export function SignUp() {
 								Por favor, ingrese su dirección
 							</Form.Control.Feedback>
 						</Form.Group>
-						<Button className="m-3" variant="secondary" onClick={handleClose}>
-							Cerrar
-						</Button>
-						{username.length > 0 && password.length > 0 && email.length > 0 && address.length > 0 ? (
-							<Button className="m-3" variant="primary" type="submit" onClick={handleClose}>
-								Continuar
+						<div className="text-right">
+							<Button className="m-3" variant="secondary" onClick={handleClose}>
+								Cerrar
 							</Button>
-						) : (
-							<Button className="m-3" variant="primary" type="submit">
-								Continuar
-							</Button>
-						)}
+							{username.length > 0 && password.length > 0 && email.length > 0 && address.length > 0 ? (
+								<Button className="m-3" variant="primary" type="submit" onClick={handleClose}>
+									Continuar
+								</Button>
+							) : (
+								<Button className="m-3" variant="primary" type="submit">
+									Continuar
+								</Button>
+							)}
+						</div>
 					</Form>
 					{auth ? <Redirect to="/" /> : null}
 				</Modal.Body>

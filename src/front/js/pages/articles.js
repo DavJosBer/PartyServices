@@ -17,7 +17,7 @@ export const Articles = () => {
 	};
 	return (
 		<>
-			<div className="container">
+			<div className="container" style={{ height: "1200px" }}>
 				<div className="row">
 					{articles.map((item, index) => (
 						<Card className="col-4" style={{ width: "18rem" }} key={index}>
@@ -48,7 +48,7 @@ export const Articles = () => {
 				</div>
 				<div className="d-flex align-items-center justify-content-center mt-4">
 					<Link to="pago">
-						<Button variant="primary" onClick={handleSubmit(suma)}>
+						<Button className="btn btn-dark" onClick={handleSubmit(suma)}>
 							Proceder al Pago
 						</Button>
 					</Link>
