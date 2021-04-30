@@ -12,7 +12,7 @@ export const Pago = () => {
 	const { store, actions } = useContext(Context);
 
 	return (
-		<div className="container">
+		<div className="container" style={{ height: "1000px" }}>
 			<div>
 				<div className="card-header bg-none text-center">
 					<h2>Concluyamos la compra</h2>

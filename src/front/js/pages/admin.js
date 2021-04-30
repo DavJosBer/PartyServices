@@ -8,7 +8,7 @@ export const ModuloAdmin = () => {
 	const { store, actions } = useContext(Context);
 
 	return (
-		<Container>
+		<Container style={{ height: "1000px" }}>
 			<Card style={{ width: "500px" }}>
 				<Card.Body>
 					<Card.Title>Módulo de Administración</Card.Title>
