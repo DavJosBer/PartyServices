@@ -270,3 +270,25 @@ def add_service():
     }
 
     return jsonify(response_body),200
+
+@api.route('/admin', methods=['DELETE'])
+#@jwt_required()
+def delete_service():
+#    current_user_id = get_jwt_identity()
+    body = request.get_json()
+    if body is None:
+        return jsonify({"msg": "Body Null"}),400
+    if 'id' not in body:
+        return jsonify({"msg": "Especifique id del servicio"}),400
+        
+    service = Service.query.filter_by(id=body['id']).first()
+
+    db.session.delete(service)
+    db.session.commit()
+
+    service = Service.query.order_by("id")
+    all_services = list(map(lambda service: service.serialize(), service))
+
+    return jsonify(all_services), 200
+
+
