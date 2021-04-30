@@ -22,6 +22,15 @@ export const Tarjeta = props => {
 						<Link to={`/service/${props.id}`}>
 							<Button className="btn btn-dark">Detalles del paquete</Button>
 						</Link>
+						{store.administrador ? (
+							<i
+								className="fas fa-trash d-inline text-danger ml-3 fa-2x"
+								onClick={() => {
+									actions.delete_service(props.service.id);
+									alert(store.msg);
+								}}
+							/>
+						) : null}
 					</div>
 				</Card.Body>
 			</Card>

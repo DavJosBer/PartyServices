@@ -48,6 +48,7 @@ class Service(db.Model):
     client = db.relationship('ShopCart', backref='service', lazy=True)
     client_order = db.relationship('Ordenes', backref='service', lazy=True)
     client_recipt = db.relationship('Factura', backref='service', lazy=True)
+    user_id = db.Column(db.Integer, db.ForeignKey('user.id'))
 
     def __repr__(self):
         return '<Service %s>' % self.name

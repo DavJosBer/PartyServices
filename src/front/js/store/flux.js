@@ -7,7 +7,8 @@ const getState = ({ getStore, getActions, setStore }) => {
 			favorites: [],
 			administrador: false,
 			msg_create_service: null,
-			total: 0
+			total: 0,
+			msg: null
 		},
 		/*Almacena las funciones que llenan el store*/
 		actions: {
@@ -164,7 +165,27 @@ const getState = ({ getStore, getActions, setStore }) => {
 					})
 					.catch(error => console.log("error", error));
 			},
-
+			delete_service: async id => {
+				await fetch(`${process.env.BACKEND_URL}/api/admin`, {
+					method: "DELETE",
+					headers: {
+						"Content-Type": "application/json"
+					},
+					body: JSON.stringify({
+						id: `${id}`
+					})
+				})
+					.then(response =>
+						response.json().then(result => {
+							if (response.status === 200) {
+								setStore({ services: result });
+							} else {
+								setStore({ msg: "No se ha podido eliminar el servicio" });
+							}
+						})
+					)
+					.catch(error => console.log("error", error));
+			},
 			sign_out: () => {
 				setStore({ favorites: [] });
 				setStore({ token: null });

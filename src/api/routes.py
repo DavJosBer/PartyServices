@@ -289,7 +289,7 @@ def delete_service():
 
     service = Service.query.order_by("id")
     all_services = list(map(lambda service: service.serialize(), service))
-
+    msg = {"msg": "Eliminado con exito"}
     return jsonify(all_services), 200
 
 
