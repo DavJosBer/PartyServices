@@ -1,5 +1,3 @@
-import { bool, number } from "prop-types";
-
 const getState = ({ getStore, getActions, setStore }) => {
 	return {
 		/*Almacena los datos de manera global para ser usados en components, pages, index o layout*/
@@ -9,7 +7,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 			favorites: [],
 			administrador: false,
 			msg_create_service: null,
-			total: number
+			total: 0
 		},
 		/*Almacena las funciones que llenan el store*/
 		actions: {

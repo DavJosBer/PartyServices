@@ -45,13 +45,13 @@ export function Login_user() {
 
 	return (
 		<>
-			<Button className="m-3" variant="primary" onClick={handleShow}>
+			<Button className="btn btn-dark m-3" onClick={handleShow}>
 				Iniciar Sesión
 			</Button>
 
 			<Modal show={show} onHide={handleClose} backdrop="static" keyboard={false}>
 				<Modal.Header closeButton>
-					<Modal.Title>Ingrese su nombre de usuario y contraseña</Modal.Title>
+					<Modal.Title className="text-center">Ingrese su nombre de usuario y contraseña</Modal.Title>
 				</Modal.Header>
 				<Modal.Body>
 					<Form noValidate validated={validated} onSubmit={event => handleSubmit(event)}>
@@ -82,21 +82,23 @@ export function Login_user() {
 								Por favor, ingrese la contraseña
 							</Form.Control.Feedback>
 						</Form.Group>
-						<Button className="m-3" variant="secondary" onClick={handleClose}>
-							Cerrar
-						</Button>
-						{username.length > 0 && password.length > 0 ? (
-							<Button className="m-3" variant="primary" type="submit" onClick={handleClose}>
-								Continuar
+						<div className="text-right">
+							<Button className="m-2" variant="secondary" onClick={handleClose}>
+								Cerrar
 							</Button>
-						) : (
-							<Button className="m-3" variant="primary" type="submit">
-								Continuar
-							</Button>
-						)}
-						<a onClick={handleShow2} className="text-danger">
-							Olvidé mi Contraseña
-						</a>
+							{username.length > 0 && password.length > 0 ? (
+								<Button className="m-2" variant="primary" type="submit" onClick={handleClose}>
+									Continuar
+								</Button>
+							) : (
+								<Button className="m-2" variant="primary" type="submit">
+									Continuar
+								</Button>
+							)}
+							<a onClick={handleShow2} className="text-danger">
+								Olvidé mi Contraseña
+							</a>
+						</div>
 					</Form>
 					{auth ? <Redirect to="/" /> : null}
 				</Modal.Body>
@@ -136,12 +138,14 @@ export function Login_user() {
 								Por favor, ingrese el correo electrónico
 							</Form.Control.Feedback>
 						</Form.Group>
-						<Button className="m-3" variant="secondary" onClick={handleClose2}>
-							Cerrar
-						</Button>
-						<Button className="m-3" variant="primary" type="submit" onClick={handleClose2}>
-							Continuar
-						</Button>
+						<div className="text-right">
+							<Button className="m-2" variant="secondary" onClick={handleClose2}>
+								Cerrar
+							</Button>
+							<Button className="m-2" variant="primary" type="submit" onClick={handleClose2}>
+								Continuar
+							</Button>
+						</div>
 					</Form>
 				</Modal.Body>
 			</Modal>
