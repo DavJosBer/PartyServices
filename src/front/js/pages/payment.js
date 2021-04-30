@@ -7,9 +7,14 @@ import { Button, Modal, Form, Card, Container, Alert, Redirect } from "react-boo
 const mensaje = () => {
 	return alert("Pago realizado exitosamente!");
 };
-
 export const Pago = () => {
 	const { store, actions } = useContext(Context);
+
+	const handleSubmit = event => {
+		event.preventDefault();
+		actions.reset_cart();
+		mensaje();
+	};
 
 	return (
 		<div className="container" style={{ height: "1000px" }}>
@@ -18,7 +23,7 @@ export const Pago = () => {
 					<h2>Concluyamos la compra</h2>
 				</div>
 
-				<form id="form">
+				<form id="form" onSubmit={event => handleSubmit(event)}>
 					<div className="card-body">
 						<div className="col-md-12" id="alert" />
 
@@ -159,9 +164,6 @@ export const Pago = () => {
 					<div className="card-footer mt-5">
 						<div className="">
 							<div className="text-right">
-								<button className="btn btn-secondary float-end m-2" type="button" onClick="resetForm()">
-									Cancelar
-								</button>
 								<button className="btn btn-primary float-end m-2" type="submit">
 									Finalizar
 								</button>

@@ -190,6 +190,9 @@ const getState = ({ getStore, getActions, setStore }) => {
 				setStore({ favorites: [] });
 				setStore({ token: null });
 				setStore({ administrador: false });
+			},
+			reset_cart: event => {
+				setStore({ favorites: [] });
 			}
 		}
 	};
