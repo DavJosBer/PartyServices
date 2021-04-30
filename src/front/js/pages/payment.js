@@ -1,9 +1,16 @@
 import React, { useContext } from "react";
 import { Link } from "react-router-dom";
 import { Context } from "../store/appContext";
+import ReactDOM from "react-dom";
+import { Button, Modal, Form, Card, Container, Alert, Redirect } from "react-bootstrap";
+
+const mensaje = () => {
+	return alert("Pago realizado exitosamente!");
+};
 
 export const Pago = () => {
 	const { store, actions } = useContext(Context);
+
 	return (
 		<div className="container">
 			<div>
@@ -21,7 +28,7 @@ export const Pago = () => {
 									<label className="form-label text-dark">Número de tarjeta</label>
 									<input
 										type="number"
-										id="card"
+										id="numeroTarjeta"
 										className="form-control"
 										placeholder="XXXXXXXXXXXXXXX"
 									/>

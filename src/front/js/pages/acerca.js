@@ -33,7 +33,7 @@ export const Acerca = () => {
 									height="150"
 								/>
 								<h4>David Bermúdez</h4>
-								<p className="text-muted">Lead Designer</p>
+								<p className="text-muted">Estudiante</p>
 								<a className="btn btn-dark btn-social mx-2" href="#!">
 									<i className="fab fa-twitter" />
 								</a>
@@ -90,7 +90,7 @@ export const Acerca = () => {
 									height="150"
 								/>
 								<h4>Emanuel Burgalin</h4>
-								<p className="text-muted">Lead Designer</p>
+								<p className="text-muted">Estudiante</p>
 								<a className="btn btn-dark btn-social mx-2" href="#!">
 									<i className="fab fa-twitter" />
 								</a>
