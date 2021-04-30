@@ -9,8 +9,8 @@ import "../../styles/home.scss";
 export const Home = () => {
 	const { store, actions } = useContext(Context);
 	return (
-		<div className="container text-center mt-5">
-			<div style={{ height: "1000px" }}>
+		<div className="container-fluid text-center mt-5">
+			<div className="container">
 				<div>
 					<h1>Party´s Services</h1>
 					{/* <span>{store.token}</span> */}
@@ -54,15 +54,15 @@ export const Home = () => {
 						</Carousel.Caption>
 					</Carousel.Item>
 				</Carousel>
-
-				<div>
-					<h1>Paquetes Disponibles</h1>
-				</div>
-
-				<div className="row mt-5">
-					{store.services.map((item, index) => (
-						<Tarjeta key={index} id={index} service={item} />
-					))}
+			</div>
+			<div className="container-fluid gray py-3">
+				<h1 className="mb-5 times">Paquetes Disponibles</h1>
+				<div className="container">
+					<div className="row">
+						{store.services.map((item, index) => (
+							<Tarjeta key={index} id={index} service={item} />
+						))}
+					</div>
 				</div>
 			</div>
 		</div>

@@ -24,7 +24,8 @@ export const CreateService = () => {
 			decoracion,
 			dj,
 			inventario,
-			precio
+			precio,
+			img
 		);
 		setAuth(true);
 	};
@@ -41,6 +42,7 @@ export const CreateService = () => {
 	const [dj, setDj] = useState("");
 	const [inventario, setInventario] = useState("");
 	const [precio, setPrecio] = useState("");
+	const [img, setImg] = useState("");
 
 	return (
 		<>
@@ -160,6 +162,12 @@ export const CreateService = () => {
 									value={precio}
 									onChange={event => setPrecio(event.target.value)}
 								/>
+							</Col>
+						</Form.Group>
+						<Form.Group as={Row} controlId="exampleForm.ControlInput1">
+							<Form.Label column>Link de Imagen</Form.Label>
+							<Col sm="9">
+								<Form.Control type="text" value={img} onChange={event => setImg(event.target.value)} />
 							</Col>
 						</Form.Group>
 						<Modal.Footer>

@@ -134,7 +134,8 @@ const getState = ({ getStore, getActions, setStore }) => {
 				Decoracion,
 				DJ,
 				stock,
-				precio
+				precio,
+				img
 			) => {
 				fetch(`${process.env.BACKEND_URL}/api/admin`, {
 					method: "POST",
@@ -152,7 +153,8 @@ const getState = ({ getStore, getActions, setStore }) => {
 						Decoracion: `${Decoracion}`,
 						DJ: `${DJ}`,
 						stock: `${stock}`,
-						precio: `${precio}`
+						precio: `${precio}`,
+						img: `${img}`
 					})
 				})
 					.then(response => response.json())

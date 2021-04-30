@@ -44,6 +44,7 @@ class Service(db.Model):
     DJ = db.Column(db.String(240), nullable=True)
     stock = db.Column(db.Integer, nullable=True)
     precio = db.Column(db.Integer, nullable=False)
+    img = db.Column(db.String(1024))
     client = db.relationship('ShopCart', backref='service', lazy=True)
     client_order = db.relationship('Ordenes', backref='service', lazy=True)
     client_recipt = db.relationship('Factura', backref='service', lazy=True)
@@ -65,6 +66,7 @@ class Service(db.Model):
             "Postre": self.Postre,
             "Decoracion": self.Decoracion,
             "DJ": self.DJ,
+            "img": self.img
         }
 
 class ShopCart(db.Model):

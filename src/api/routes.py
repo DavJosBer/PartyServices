@@ -258,6 +258,7 @@ def add_service():
     service.DJ = body['DJ']
     service.stock = body['stock']
     service.precio = body['precio']
+    service.img = body['img']
 
     db.session.add(service)
     db.session.commit()
